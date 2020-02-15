@@ -1,0 +1,8 @@
+= Code snippets
+:toc: left
+:toc-title: Content
+
+include::kafka/kafka.adoc[]
+include::docker/docker.adoc[]
+include::maven/mvn.adoc[]
+

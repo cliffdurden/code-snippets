@@ -1,0 +1,41 @@
+
+== Kafka
+
+=== Topics
+==== Create a topic
+[listing.terminal,subs="quotes"]
+----
+kafka-topics \
+--bootstrap-server *_localhost:9092_* \
+--create \
+--replication-factor 1 \
+--partitions 1 \
+--topic *_topic-name_*
+----
+==== Show topics
+[listing.terminal,subs="quotes"]
+----
+kafka-topics \
+--bootstrap-server *_localhost:9092_* \
+--list
+----
+=== Producers
+[listing.terminal,subs="quotes"]
+----
+kafka-console-producer \
+--broker-list *_localhost:9092_* \
+--property parse.key=true \
+--property key.separator=, \
+--topic *_topic-name_*
+----
+=== Consumers
+[listing.terminal,subs="quotes"]
+----
+kafka-console-consumer \
+--bootstrap-server *_localhost:9092_* \
+--topic *_topic-name_* \
+--_from-beginning_ \
+--property print.key=true \
+--value-deserializer _org.apache.kafka.common.serialization.StringDeserializer_
+----
+
