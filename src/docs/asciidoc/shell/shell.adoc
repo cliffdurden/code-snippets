@@ -1,0 +1,39 @@
+== Shell
+
+=== ShortKeys
+
+Go to beginning of the line
+
+----
+Cmd+A
+----
+
+Go to the end of the line
+
+----
+Cmd+E
+----
+
+Search in history
+
+----
+Cmd+R
+----
+
+Delete from the current position to the beginning of the line
+
+----
+Cmd+U
+----
+
+Delete from the current position to the end of the line
+
+----
+Cmd+K
+----
+
+Delete a word
+
+----
+Ctrl+W
+----

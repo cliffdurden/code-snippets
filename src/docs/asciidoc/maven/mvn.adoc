@@ -1,7 +1,7 @@
-
 == Maven
 
 === Versions
+
 [listing.terminal,subs="quotes"]
 ----
 mvn versions:set -DgroupId=*_io.cliffdurden._** -DartifactId=* -DoldVersion=*_3.*_* -DnewVersion=*_3.0.1_*

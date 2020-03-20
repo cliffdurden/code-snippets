@@ -1,8 +1,9 @@
-
 == Kafka
 
 === Topics
+
 ==== Create a topic
+
 [listing.terminal,subs="quotes"]
 ----
 kafka-topics \
@@ -12,14 +13,18 @@ kafka-topics \
 --partitions 1 \
 --topic *_topic-name_*
 ----
+
 ==== Show topics
+
 [listing.terminal,subs="quotes"]
 ----
 kafka-topics \
 --bootstrap-server *_localhost:9092_* \
 --list
 ----
+
 === Producers
+
 [listing.terminal,subs="quotes"]
 ----
 kafka-console-producer \
@@ -28,7 +33,9 @@ kafka-console-producer \
 --property key.separator=, \
 --topic *_topic-name_*
 ----
+
 === Consumers
+
 [listing.terminal,subs="quotes"]
 ----
 kafka-console-consumer \
@@ -38,4 +45,25 @@ kafka-console-consumer \
 --property print.key=true \
 --value-deserializer _org.apache.kafka.common.serialization.StringDeserializer_
 ----
+
+=== Streams
+
+Application reset:
+
+[listing.terminal,subs="quotes"]
+----
+kafka-streams-application-reset \
+--application-id *_consumer-id_* \
+--input-topics *_topic-name_* \
+--bootstrap-servers *_localhost:9092_*
+----
+
+[listing.terminal,subs="quotes"]
+----
+kafka-streams-application-reset \
+--application-id *_application-id_* \
+--input-topics *_topic-name_* \
+--bootstrap-servers *_localhost:9092_*
+----
+
 

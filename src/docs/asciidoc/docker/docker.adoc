@@ -1,11 +1,42 @@
-
 == Docker
 
 === docker-compose
+
 [listing.terminal,subs="quotes"]
 ----
 docker-compose up
 ----
+
+[listing.terminal,subs="quotes"]
 ----
 docker-compose down
+----
+
+=== docker container
+
+Show docker container ip address:
+
+[listing.terminal,subs="quotes"]
+----
+docker container inspect --format '{{ .NetworkSettings.IPAddress }}' _containerId_
+----
+
+=== docker image
+
+Clean images
+
+----
+docker image prune
+----
+
+Clean all
+
+----
+docker system prune
+----
+
+Show disc usage
+
+----
+docker system df
 ----
